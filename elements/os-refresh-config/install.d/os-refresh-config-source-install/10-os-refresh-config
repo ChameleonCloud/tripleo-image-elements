@@ -8,7 +8,7 @@ manifest=$(get-pip-manifest os-refresh-config)
 
 # pip and virtualenv is installed by the pip-and-virtualenv element
 
-virtualenv --setuptools /opt/stack/venvs/os-refresh-config
+python3 -m venv /opt/stack/venvs/os-refresh-config
 set +u
 source /opt/stack/venvs/os-refresh-config/bin/activate
 set -u

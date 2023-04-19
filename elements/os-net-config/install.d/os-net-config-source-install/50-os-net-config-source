@@ -3,7 +3,7 @@ set -ex
 
 manifest=$(get-pip-manifest os-net-config)
 
-virtualenv --setuptools $OS_NET_CONFIG_VENV_DIR
+python3 -m venv $OS_NET_CONFIG_VENV_DIR
 set +u
 source $OS_NET_CONFIG_VENV_DIR/bin/activate
 set -u

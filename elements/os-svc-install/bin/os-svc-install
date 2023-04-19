@@ -13,7 +13,7 @@ function python_install() {
     SITE_PCKGS="--system-site-packages"
     fi
     mkdir -p $(dirname $install_dir)
-    virtualenv $SITE_PCKGS $install_dir
+    python3 -m venv $SITE_PCKGS $install_dir
 
     set +u
     source $install_dir/bin/activate
@@ -145,5 +145,5 @@ if [[ -z "$install_dir" ]]; then
     install_dir="/opt/stack/venvs/$user"
 fi
 
-install-packages python-dev git-core gcc libc6-dev libxml2-dev libxslt-dev libz-dev
+install-packages python3-dev git-core gcc libc6-dev libxml2-dev libxslt-dev libz-dev
 install_os_service "$user" "$repo" "$branch" "$install_dir" "$system_site_packages"

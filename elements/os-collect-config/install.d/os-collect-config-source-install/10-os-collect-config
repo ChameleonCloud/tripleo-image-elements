@@ -3,7 +3,7 @@ set -eux
 
 manifest=$(get-pip-manifest os-collect-config)
 
-virtualenv --setuptools $OS_COLLECT_CONFIG_VENV_DIR
+python3 -m venv $OS_COLLECT_CONFIG_VENV_DIR
 set +u
 source $OS_COLLECT_CONFIG_VENV_DIR/bin/activate
 set -u
