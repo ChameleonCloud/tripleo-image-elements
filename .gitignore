@@ -4,6 +4,7 @@
 *.pyc
 .tox
 *.egg-info
+.eggs/
 dist
 *.qcow2
 build
