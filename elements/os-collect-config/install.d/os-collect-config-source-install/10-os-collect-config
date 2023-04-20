@@ -11,6 +11,7 @@ set -u
 if [ -n "$manifest" ]; then
     use-pip-manifest $manifest
 else
+    $OS_COLLECT_CONFIG_VENV_DIR/bin/pip install -U pip
     # Need setuptools>=1.0 to manage connections when
     # downloading from pypi using http_proxy and https_proxy
     $OS_COLLECT_CONFIG_VENV_DIR/bin/pip install -U 'setuptools>=1.0'
